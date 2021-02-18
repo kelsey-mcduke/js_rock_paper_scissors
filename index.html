@@ -2,11 +2,52 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Tic Tac Toe</title>
+    <title>Rock, Paper, Scissors</title>
   </head>
   <body>
     <script>
+
+      // create function that plays for 5 rounds and prints the score and winner
+      function gameOn () {
+        while (i = 0, i < 5, i++) {
+        //prompt user for rock, paper, or scissors
+        let playerInput = prompt("Enter: Rock, Paper, or Scissors");
+        //store users answer in parameter playerSelection
+        let playerSelection = playerInput.toLowerCase();
+        //create function that generates random response rock, paper, or scissors
+        function computerPlay () {
+          let choice = Math.floor(Math.random() * (12-1) + 1);
+          if (choice <= 4) {
+            return "rock";
+          } else if (choice <= 8) {
+            return "paper";
+          } else {
+            return "scissors"
+          }
+        } 
       
+        //store computer response in parameter computerSelection
+        let computerSelection = computerPlay();
+        //create function singleRound comparing playerSelection and computerSelection
+        function singleRound (playerSelection, computerSelection) {
+          if (playerSelection === computerSelection) {
+            return "It's a tie!";
+          } else if (playerSelection === "rock" && computerSelection === "scissors") {
+            return "You Win! Rock beats Scissors!";
+          } else if (playerSelection === "rock" && computerSelection === "paper") {
+            return "You Lose! Paper beats Rock!";
+          } else if (playerSelection === "paper" && computerSelection === "scissors") {
+            return "You Lose! Scissors beats Paper!";
+          } else if (playerSelection === "paper" && computerSelection === "rock") {
+            return "You Win! Paper beats Rock!";
+          } else if (playerSelection === "scissors" && computerSelection === "rock") {
+            return "You Lose! Rock beats scissors!";
+          } else {
+            return "You Win! Scissors beat Paper!";
+          }
+        }
+      }
+    }
     </script>
   </body>
 </html>

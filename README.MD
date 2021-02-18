@@ -3,14 +3,14 @@ This is a JavaScript Project from The Odin Project:
 The goal is to (first step) create a Rock Paper Scissors game played within the console.
 
 Steps:
- [ ] Create function called computerPlay
- [ ] computerPlay should return a random response of 'Rock', 'Paper', or 'Scissors'
- [ ] Create function that plays a single round of Rock Paper Scissors and call it singleRound
- [ ] singleRound should take two parameters (playerSelection, computerSelection) and then return a string that declares the winner of the round: "You Lose! Paper beats Rock"
- [ ] make function case insensitive
- [ ] make sure you are returning the results of the function call not console.log()
+ [X] Create function called computerPlay
+ [X] computerPlay should return a random response of 'Rock', 'Paper', or 'Scissors'
+ [X] Create function that plays a single round of Rock Paper Scissors and call it singleRound
+ [X] singleRound should take two parameters (playerSelection, computerSelection) and then return a string that declares the winner of the round: "You Lose! Paper beats Rock"
+ [X] make function case insensitive
+ [X] make sure you are returning the results of the function call not console.log()
  [ ] create another function called game() and use singleRound() to play a 5 round game that keeps score and reports winner/loser at the end.
- [ ] use prompt() to get input from the user
+ [X] use prompt() to get input from the user
 
 PSUEDOCODE (For user prompt to first round):
 
