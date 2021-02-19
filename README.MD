@@ -26,3 +26,13 @@ PSUEDOCODE (For user prompt to first round):
 //ELSE IF playerSelection === "paper" && computerSelection === "rock" return "You Win! Paper beats Rock!"
 //ELSE IF playerSelection === "scissors" && computerSelection === "rock" return "You Lose! Rock beats scissors!"
 //ELSE return "You Win! Scissors beat Paper!"
+
+FOR 5 Rounds:
+[X] Create variable playerScore
+[X] When player wins update player score
+[X] Create variable computerScore
+[X] When computer wins update computer score
+[X] IF playerScore > computerScore console.log( "You win! You won " + playerScore + " games!" )
+[X] ELSE return console.log("You lose! The computer won " + computerScore + " games!")
+[X] Create Button to begin game
+
