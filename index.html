@@ -3,74 +3,60 @@
   <head>
     <meta charset="utf-8">
     <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="main.css">
   </head>
   <body>
-    <button id="start-game">Let's Play!</button>
-    <script>
-      //variable to count player wins
-      let playerScore = 0;
-      //vartiable to count computer wins 
-      let computerScore = 0;
-
-      // create function that plays for 5 rounds and prints the score and winner
-      function game () {
-
-        for (i = 0; i < 5; i++ ) {
-          //prompt user for rock, paper, or scissors
-          let playerInput = prompt("Enter: Rock, Paper, or Scissors");
-          //store users answer in parameter playerSelection
-          let playerSelection = playerInput.toLowerCase();
-          //store computer response in parameter computerSelection
-          let computerSelection = computerPlay();
-          singleRound(playerSelection, computerSelection);
-        }
-        if (playerScore > computerScore) {
-          alert("You win! You won " + playerScore + " games out of 5 games!");
-        } else {
-          alert("You lose! The computer won " + computerScore + " games out of 5 games!");
-        }
-      }
-      
-      //create function that generates random response rock, paper, or scissors
-      function computerPlay () {
-        let choice = Math.floor(Math.random() * (12-1) + 1);
-        if (choice <= 4) {
-          return "rock";
-        } else if (choice <= 8) {
-          return "paper";
-        } else {
-          return "scissors"
-        }
-        return computerSelection;
-      } 
-
-      //create function singleRound comparing playerSelection and computerSelection
-      function singleRound (playerSelection, computerSelection) {
-        if (playerSelection === computerSelection) {
-          return "It's a tie!"
-        } else if (playerSelection === "rock" && computerSelection === "scissors") {
-          // return "You Win! Rock beats Scissors!"
-          return playerScore++;
-        } else if (playerSelection === "rock" && computerSelection === "paper") {
-          // return "You Lose! Paper beats Rock!"
-          return computerScore++;
-        } else if (playerSelection === "paper" && computerSelection === "scissors") {
-          // return "You Lose! Scissors beats Paper!"
-          return computerScore++;
-        } else if (playerSelection === "paper" && computerSelection === "rock") {
-          // return "You Win! Paper beats Rock!"
-          return playerScore++;
-        } else if (playerSelection === "scissors" && computerSelection === "rock") {
-          // return "You Lose! Rock beats scissors!"
-          return computerScore++;
-        } else {
-          // return "You Win! Scissors beat Paper!"
-          return playerScore++;
-        }
-      }
-
-      let startGame = document.getElementById("start-game");
-      startGame.addEventListener("click", game);
-    </script>
+    <main>
+      <div class="play">
+        <h1>Let's Play Rock, Paper, Scissors!</h1>
+        <div class="first-round">
+          <h4>Round 1</h4>
+          <label for="user-first-guess">Choose: Rock, Paper, or Scissors</label>
+          <input type="text" name="user-first-guess">
+          <input type="submit">
+          <div id="computerFirstGuess">
+          </div> <!--end of computerFirstGuess-->
+        </div><!--end of first-round-->
+        <div class="second-round">
+          <h4>Round 2</h4>
+          <label for="user-second-guess">Choose: Rock, Paper, or Scissors</label>
+          <input type="text" name="user-second-guess">
+          <input type="submit">
+          <div id="computerSecondGuess">
+          </div> <!--end of computerSecondGuess-->
+        </div><!--end of second-round-->
+        <div class="third-round">
+          <h4>Round 3</h4>
+          <label for="user-third-guess">Choose: Rock, Paper, or Scissors</label>
+          <input type="text" name="user-third-guess">
+          <input type="submit">
+          <div id="computerThirdGuess">
+          </div> <!--end of computerThirdGuess-->
+        </div><!--end of third-round-->
+        <div class="fourth-round">
+          <h4>Round 4</h4>
+          <label for="user-fourth-guess">Choose: Rock, Paper, or Scissors</label>
+          <input type="text" name="user-fourth-guess">
+          <input type="submit">
+          <div id="computerFourthGuess">
+          </div> <!--end of computerFourthGuess-->
+        </div><!--end of fourth-round-->
+        <div class="fifth-round">
+          <h4>Round 5</h4>
+          <label for="user-fifth-guess">Choose: Rock, Paper, or Scissors</label>
+          <input type="text" name="user-fifth-guess">
+          <input type="submit">
+          <div id="computerFifthGuess">
+          </div> <!--end of computerFifthGuess-->
+        </div><!--end of fifth-round-->
+      </div><!--end of play-->
+      <div class="winner">
+        <h2>And the Winner Is:</h2>
+      </div>
+      <div class="play-again">
+        <button id="replay">Replay</button>
+      </div>
+    </main>
+    <script src="script.js"></script>
   </body>
 </html>
