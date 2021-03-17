@@ -1,0 +1,30 @@
+
+body {
+  max-width: 960px;
+  margin: 20px;
+  font-size: 16px;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  background-color: #e0e0d1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Ranchers', cursive;
+}
+
+.play {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.play h1 {
+  font-size: 1.5em;
+  text-align: center;
+  width: 100%;
+}
