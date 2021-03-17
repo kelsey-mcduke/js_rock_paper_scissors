@@ -14,46 +14,14 @@
     <main>
       <div class="play">
         <h1>Let's Play Rock, Paper, Scissors!</h1>
-        <div class="first-round">
-          <h4>Round 1</h4>
-          <label for="user-first-guess">Choose: Rock, Paper, or Scissors</label>
-          <input type="text" name="user-first-guess">
-          <input type="submit">
-          <div id="computerFirstGuess">
-          </div> <!--end of computerFirstGuess-->
-        </div><!--end of first-round-->
-        <div class="second-round">
-          <h4>Round 2</h4>
-          <label for="user-second-guess">Choose: Rock, Paper, or Scissors</label>
-          <input type="text" name="user-second-guess">
-          <input type="submit">
-          <div id="computerSecondGuess">
-          </div> <!--end of computerSecondGuess-->
-        </div><!--end of second-round-->
-        <div class="third-round">
-          <h4>Round 3</h4>
-          <label for="user-third-guess">Choose: Rock, Paper, or Scissors</label>
-          <input type="text" name="user-third-guess">
-          <input type="submit">
-          <div id="computerThirdGuess">
-          </div> <!--end of computerThirdGuess-->
-        </div><!--end of third-round-->
-        <div class="fourth-round">
-          <h4>Round 4</h4>
-          <label for="user-fourth-guess">Choose: Rock, Paper, or Scissors</label>
-          <input type="text" name="user-fourth-guess">
-          <input type="submit">
-          <div id="computerFourthGuess">
-          </div> <!--end of computerFourthGuess-->
-        </div><!--end of fourth-round-->
-        <div class="fifth-round">
-          <h4>Round 5</h4>
-          <label for="user-fifth-guess">Choose: Rock, Paper, or Scissors</label>
-          <input type="text" name="user-fifth-guess">
-          <input type="submit">
-          <div id="computerFifthGuess">
-          </div> <!--end of computerFifthGuess-->
-        </div><!--end of fifth-round-->
+        <div class="user-play">
+          <button id="userbtn">Make Your Choice!</button>
+          <div class="user-choice">
+            <p id="rock">ROCK!</p>
+            <p id="paper">PAPER!</p>
+            <p id="scissors">SCISSORS!</p>
+          </div>
+        </div>
       </div><!--end of play-->
       <div class="winner">
         <h2>And the Winner Is:</h2>
